@@ -24,14 +24,14 @@ const Header = () => {
           <div className="hidden md:block">
             <nav className="ml-10 flex items-baseline space-x-4">
               <Link href="/">
-                <a className={`font-medium py-2 rounded-md text-sm ${location === "/" ? "text-primary" : "text-neutral-600 hover:text-primary"}`}>
+                <span className={`font-medium py-2 rounded-md text-sm ${location === "/" ? "text-primary" : "text-neutral-600 hover:text-primary"} cursor-pointer`}>
                   Profiles
-                </a>
+                </span>
               </Link>
               <Link href="/admin">
-                <a className={`font-medium py-2 rounded-md text-sm ${location === "/admin" ? "text-primary" : "text-neutral-600 hover:text-primary"}`}>
+                <span className={`font-medium py-2 rounded-md text-sm ${location === "/admin" ? "text-primary" : "text-neutral-600 hover:text-primary"} cursor-pointer`}>
                   Admin
-                </a>
+                </span>
               </Link>
             </nav>
           </div>
@@ -53,28 +53,28 @@ const Header = () => {
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white shadow-md">
             <Link href="/">
-              <a 
+              <span 
                 className={`block px-3 py-2 rounded-md text-base font-medium ${
                   location === "/" 
                     ? "bg-primary text-white" 
                     : "text-neutral-600 hover:bg-neutral-200"
-                }`}
+                } cursor-pointer`}
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Profiles
-              </a>
+              </span>
             </Link>
             <Link href="/admin">
-              <a 
+              <span 
                 className={`block px-3 py-2 rounded-md text-base font-medium ${
                   location === "/admin" 
                     ? "bg-primary text-white" 
                     : "text-neutral-600 hover:bg-neutral-200"
-                }`}
+                } cursor-pointer`}
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Admin
-              </a>
+              </span>
             </Link>
           </div>
         </div>
